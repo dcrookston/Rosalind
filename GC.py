@@ -44,6 +44,10 @@ for line in fileinput.input():
     line = line.strip()
     #This line is a label
     if (re.match("^>[\s]*Rosalind_[\d]", line) is not None):
+
+        if (this_gene.percent() > winner.percent()):
+            winner = this_gene
+            
         #Replace old this_gene with our new gene
         this_gene = Gene(line[1:])
 
@@ -52,8 +56,8 @@ for line in fileinput.input():
         #Update the gene with the current list of bases
         this_gene.add_bases(line)
 
-    if (this_gene.percent() > winner.percent()):
-        winner = this_gene
+if (this_gene.percent() > winner.percent()):
+    winner = this_gene
 
 print(winner)
 print(winner.percent())
