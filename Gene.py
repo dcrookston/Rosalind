@@ -27,6 +27,9 @@ class gene:
     def __repr__(self):
         return "Gene named " + self.name
 
+    def __iter__(self):
+        return(list(self.bases))
+
     def percent_gc(self):
         if (self.length == 0):
             return 0
@@ -52,3 +55,34 @@ class gene:
         self.acount += bases.count("A")
         self.tcount += bases.count("T")
         self.length += len(bases)
+
+#An iterator class for genes
+class geneIterator:
+    def ___init___(self, gene):
+        self._bases = gene.bases
+        self._index = 0
+
+    def __next__(self):
+        '''Returns the next base'''
+        if (self._index < len(self._bases)):
+            self._index += 1
+            return self._bases[self._index - 1]
+        raise StopIteration
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

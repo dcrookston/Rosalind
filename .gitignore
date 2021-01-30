@@ -1,2 +1,5 @@
 rosalind_*.txt
 *.pyc
+*.zip
+*.log
+Rosalind.egg-info/*
