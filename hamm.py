@@ -12,5 +12,3 @@ def hamm(s, t):
             mismatches += 1
 
     return mismatches
-
-hamm("GAGCCTACTAACGGGAT","CATCGTAATGACGGCCT")
