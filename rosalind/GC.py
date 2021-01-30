@@ -7,18 +7,25 @@ import sys
 import rosalind.Gene
 import rosalind.fasta
 
-#A variable to hold the winner so far.
-winner = rosalind.Gene.gene("")
+def GC(filename):
+    #A variable to hold the winner so far.
+    winner = rosalind.Gene.gene("")
 
-if (len(sys.argv) > 1):
-    gene_list = rosalind.fasta.generead(sys.argv[1])
-else:
-    print("Enter dataset (EOF to submit):")
-    gene_list = rosalind.fasta.generead(None)
+    return_str = ""
+    
+    gene_list = rosalind.fasta.generead(filename)
+    
+    for i in gene_list:
+        if (i.percent_gc() > winner.percent_gc()):
+            winner = i
+    
+    return_str += str(winner) + "\n"
+    return_str += str(winner.percent_gc())
+    
+    return(return_str)
 
-for i in gene_list:
-    if (i.percent_gc() > winner.percent_gc()):
-        winner = i
-
-print(winner)
-print(winner.percent_gc())
+if (__name__ == "__main__"):
+    if (len(sys.argv) > 1):
+        print(GC(sys.argv[1]))
+    else:
+        print(GC(None))
