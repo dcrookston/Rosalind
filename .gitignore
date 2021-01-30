@@ -1,3 +1,2 @@
-
-rosalind_gc.txt
-rosalind_gc2.txt
+rosalind_*.txt
+*.pyc
