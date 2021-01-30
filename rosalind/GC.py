@@ -4,7 +4,7 @@
 import re
 import fileinput
 import sys
-import Gene
+import rosalind.Gene
 
 #A variable to hold the winner so far.
 winner = Gene.gene("")
