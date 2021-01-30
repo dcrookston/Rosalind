@@ -1,9 +1,10 @@
 import pickle
-from Gene import gene
-from fasta import generead
+from rosalind.Gene import gene
+from rosalind.fasta import generead
+import pytest
 
 def test_generead():
-    fp = open("genes.p", rb)
+    fp = open("genes.p", "rb")
     pickled_genes = pickle.load(fp)
     fp.close()
 
