@@ -7,4 +7,5 @@ module = "Rosalind"
 author = "Daniel Crookston"
 author-email = "dcrookston@gmail.com"
 classifiers = ["License :: OSI Approved :: MIT License"]
+description-file = "README.md"
 
