@@ -5,9 +5,13 @@ import fileinput
 import sys
 from rosalind.Gene import gene
 
-def generead(file):
+def generead(filename):
     accumulator = []
-    for line in fileinput.input(file):
+
+    if (filename is None):
+        print("Enter dataset (EOF to submit):")
+    
+    for line in fileinput.input(filename):
         line = line.strip()
 
         #Create a new gene
