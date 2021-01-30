@@ -8,7 +8,7 @@ def test_generead():
     pickled_genes = pickle.load(fp)
     fp.close()
 
-    genes = generead("FASTA.txt")
+    genes = generead("rosalind/FASTA.txt")
     for i in zip(pickled_genes, genes):
         assert(i[0].bases == i[1].bases)
 
