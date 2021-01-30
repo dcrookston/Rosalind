@@ -1,8 +1,6 @@
 #A solution to the problem "Computing GC Content" on Rosalind.info
 #http://rosalind.info/problems/gc/
 
-import re
-import fileinput
 import sys
 import rosalind.Gene
 import rosalind.fasta
