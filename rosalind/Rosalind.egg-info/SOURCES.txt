@@ -1,5 +1,0 @@
-setup.py
-Rosalind.egg-info/PKG-INFO
-Rosalind.egg-info/SOURCES.txt
-Rosalind.egg-info/dependency_links.txt
-Rosalind.egg-info/top_level.txt
