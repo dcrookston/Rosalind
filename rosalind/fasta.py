@@ -3,7 +3,7 @@
 import re
 import fileinput
 import sys
-from Gene import gene
+from rosalind.Gene import gene
 
 def generead(file):
     accumulator = []
